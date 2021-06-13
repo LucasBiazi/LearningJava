@@ -1,8 +1,22 @@
 
 public class Variables_in_Java {
 
+    //Methods
+    public static void method(String beginning, String end, int one) {
+        System.out.println(beginning + end + one + "!!!\n");
+    }
+
+    //Methods using return
+    static int method2(int val1) {
+        return val1;
+    }
+
     //The following Method is the main Java method!
     public static void main(String[] args) {
+
+        //Method execution
+        method("This is a simple ", "learning script!!!", method2(1));
+
         // Some of the variables in Java    
         // Primitive types:
         int age = 35;
@@ -52,6 +66,16 @@ public class Variables_in_Java {
         System.out.println(Math.random());
         // Random number between 0.0 and 10...
         System.out.println((int) (Math.random() * 11));
+
+        //Separator
+        System.out.print("\n\n############################################\n\n");
+
+        //For each array
+        //for(type variable: arrayname){}
+        String[] names = {"Leo", "Mark", "Cloe", "Edna"};
+        for (String i : names) {
+            System.out.println("Good morning " + i + "!");
+        }
     }
 
 }
