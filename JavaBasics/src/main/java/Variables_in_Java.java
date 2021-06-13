@@ -25,9 +25,33 @@ public class Variables_in_Java {
         float full_height = (float) (short_height + 0.576);
         System.out.println("Short height: " + short_height);
         System.out.print("Full height: " + full_height);
-        
+
         //Separator
         System.out.print("\n\n############################################\n\n");
+
+        //Basic math:
+        //Addition/Sum
+        int num1 = 10;
+        int num2 = 90;
+        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+
+        //Subtraction
+        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+
+        //Multiplication
+        System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+
+        //Division
+        System.out.println(num2 + " / " + num1 + " = " + (num2 / num1));
+
+        //Separator
+        System.out.print("\n\n############################################\n\n");
+
+        //Random values
+        // Random number between 0.0 and 0.9999...
+        System.out.println(Math.random());
+        // Random number between 0.0 and 10...
+        System.out.println((int) (Math.random() * 11));
     }
 
 }
