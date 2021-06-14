@@ -1,8 +1,8 @@
 
-public class Variables_in_Java {
+public class Main {
 
     //Methods
-    public static void method(String beginning, String end, int one) {
+    static void method(String beginning, String end, int one) {
         System.out.println(beginning + end + one + "!!!\n");
     }
 
@@ -13,9 +13,14 @@ public class Variables_in_Java {
 
     //The following Method is the main Java method!
     public static void main(String[] args) {
-
         //Method execution
+
         method("This is a simple ", "learning script!!!", method2(1));
+        //Calling a static method by referencing its class name (since it is just a static method):
+        Second.say_hello();
+        //Instance (object) of the class Second (constructor method):
+        Second car = new Second("Logan", 1978);
+        car.load_car(car.car_name, car.year);
 
         // Some of the variables in Java    
         // Primitive types:
