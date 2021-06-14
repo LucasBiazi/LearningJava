@@ -81,6 +81,16 @@ public class Main {
         for (String i : names) {
             System.out.println("Good morning " + i + "!");
         }
+
+        //Separator
+        System.out.print("\n\n############################################\n\n");
+
+        //Calling an implemented method from a abstract class:
+        Person person = new Person();
+        person.create_person("Jhonas", 34, 102.32f);
+        person.create_person("Maryne", 18, 74.13f);
+        person.create_person("Bob", 87, 94.71f);
+
     }
 
 }
