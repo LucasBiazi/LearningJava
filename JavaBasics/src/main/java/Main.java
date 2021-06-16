@@ -1,3 +1,6 @@
+// Importing a package
+
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,10 +14,14 @@ public class Main {
         return val1;
     }
 
+    private static void callSeparator() {
+        System.out.println("\n\n##############################################################\n\n");
+    }
+
     //The following Method is the main Java method!
     public static void main(String[] args) {
-        //Method execution
 
+        //Method execution
         method("This is a simple ", "learning script!!!", method2(1));
         //Calling a static method by referencing its class name (since it is just a static method):
         Second.say_hello();
@@ -37,7 +44,7 @@ public class Main {
         }
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         // Type Casting: Transfering values through different types of variables
         int short_height = 1;
@@ -46,7 +53,7 @@ public class Main {
         System.out.print("Full height: " + full_height);
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         //Basic math:
         //Addition/Sum
@@ -64,7 +71,7 @@ public class Main {
         System.out.println(num2 + " / " + num1 + " = " + (num2 / num1));
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         //Random values
         // Random number between 0.0 and 0.9999...
@@ -73,7 +80,7 @@ public class Main {
         System.out.println((int) (Math.random() * 11));
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         //For each array
         //for(type variable: arrayname){}
@@ -83,7 +90,7 @@ public class Main {
         }
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         //Calling an implemented method from a abstract class:
         Person person = new Person();
@@ -92,7 +99,7 @@ public class Main {
         person.create_person("Bob", 87, 94.71f);
 
         //Separator
-        System.out.print("\n\n############################################\n\n");
+        callSeparator();
 
         Animal animal_instance = new Animal();
         animal_instance.createAnimal("Tiger", 2, 160.456f);
@@ -110,6 +117,37 @@ public class Main {
                 + animal_instance.getName() + "\nAge: "
                 + animal_instance.getAge() + "\nWeight: "
                 + animal_instance.getWeight());
+
+        //Separator
+        callSeparator();
+
+        //Getting the user's input
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you like pízza?\nType your answer:\nyes        no");
+        String answer = scanner.nextLine();
+
+        if (answer.equals("yes")) {
+            System.out.println("You do like pizza!");
+        } else if (answer.equals("no")) {
+            System.out.println("You do not like pizza!");
+        } else {
+            System.out.println("I didn't quite get it, sorry!");
+        }
+
+        //Separator
+        callSeparator();
+        // Working with nested classess:
+        class InnerClass {
+
+            class InnerIneerClass {
+
+                final static int my_fake_age = 258;
+            }
+
+        }
+        // Calling the static object from the nested class
+        System.out.println("My fake age: " + InnerClass.InnerIneerClass.my_fake_age);
+
     }
 
 }
