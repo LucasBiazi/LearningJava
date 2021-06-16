@@ -91,6 +91,25 @@ public class Main {
         person.create_person("Maryne", 18, 74.13f);
         person.create_person("Bob", 87, 94.71f);
 
+        //Separator
+        System.out.print("\n\n############################################\n\n");
+
+        Animal animal_instance = new Animal();
+        animal_instance.createAnimal("Tiger", 2, 160.456f);
+        System.out.println("Non altered animal: \n" + "Name: "
+                + animal_instance.getName() + "\nAge: "
+                + animal_instance.getAge() + "\nWeight: "
+                + animal_instance.getWeight());
+
+        //Altering the animal by using the set's methods
+        animal_instance.setName("White Tiger");
+        animal_instance.setAge(4);
+        animal_instance.setWeight(150.845f);
+
+        System.out.println("\n\nAltered animal: \n" + "Name: "
+                + animal_instance.getName() + "\nAge: "
+                + animal_instance.getAge() + "\nWeight: "
+                + animal_instance.getWeight());
     }
 
 }
