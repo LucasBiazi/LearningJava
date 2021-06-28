@@ -37,7 +37,7 @@ public class Main {
         Main main = new Main();
         System.out.println("This is a simple 4 operations calculator, it only accepts 2 values as input.");
         while (choice != 5) {
-            System.out.println("\nChoose an operationn: \n(1) Addition  \n(2) Subtraction \n(3) Multiplication \n(4) Division \n(5) Exit");
+            System.out.println("\nChoose an operation: \n(1) Addition  \n(2) Subtraction \n(3) Multiplication \n(4) Division \n(5) Exit");
             choice = main.sc.nextInt();
             switch (choice) {
                 case 1: // Addition
