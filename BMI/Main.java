@@ -25,16 +25,26 @@ public class Main {
         // Main loop
         while (choice != 2) {
             System.out.println("\nWelcome to the BMI calculator:\n(1)Calculate BMI\n(2)Exit");
-            choice = scanner.nextInt();
+            try {
+                choice = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Please type in a number! Error: " + e);
+                choice = 2;
+            }
             switch (choice) {
                 case 1: // Calculate the BMI
-                    System.out.println("Type in your weight (kg):");
-                    weight = scanner.nextFloat();
-                    System.out.println("Type in your height (m):");
-                    height = scanner.nextFloat();
-                    result = (weight / (height * height));
-                    // Comparisons' method
-                    Comparison(result);
+                    try {
+                        System.out.println("Type in your weight (kg):");
+                        weight = scanner.nextFloat();
+                        System.out.println("Type in your height (m):");
+                        height = scanner.nextFloat();
+                        result = (weight / (height * height));
+                        // Comparisons' method
+                        Comparison(result);
+                    } catch (Exception e) {
+                        System.out.println("Please type in a number! Error: " + e);
+                        choice = 2;
+                    }
                     break;
                 case 2: // Exit program
                     System.out.println("Bye!");
