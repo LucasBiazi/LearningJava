@@ -15,7 +15,7 @@ public class Main {
 		
 		GamePanel game_panel = new GamePanel();
 		window.add(game_panel);
-		window.pack();
+		window.pack(); // Packs our window settings
 		
 		window.setLocationRelativeTo(null); // Spawn window on the center of the screen
 		window.setVisible(true); // Make it visible
